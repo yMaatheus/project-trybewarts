@@ -25,7 +25,7 @@ describe('Trybewarts', () => {
     cy.visit('./index.html');
   });
 
-  describe.only('1 - Crie uma barra verde na parte superior da página', () => {
+  describe('1 - Crie uma barra verde na parte superior da página', () => {
     it('A barra possui a classe `header`', () => {
       cy.get(TOP_BAR_SELECTOR).should('exist');
     });
@@ -39,7 +39,7 @@ describe('Trybewarts', () => {
     });
   });
 
-  describe.only('2 - Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior', () => {
+  describe('2 - Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior', () => {
     it('Existe um elemento img com a classe `trybewarts-header-logo`', () => {
       cy.get(TRYBEWARTS_LOGO_SELECTOR).should('exist');
     });
@@ -51,7 +51,7 @@ describe('Trybewarts', () => {
     });
   });
 
-  describe.only('3 - Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login', () => {
+  describe('3 - Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login', () => {
     it('Existe um formulário com a classe "trybewarts-login"', () => {
       cy.get(TRYBEWARTS_LOGIN_FORM_SELECTOR).should('exist');
     });
@@ -100,7 +100,7 @@ describe('Trybewarts', () => {
     });
   });
 
-  describe.only('4 - Crie um título com o texto `Trybewarts` centralizado dentro do `Header`', () => {
+  describe('4 - Crie um título com o texto `Trybewarts` centralizado dentro do `Header`', () => {
     it('Existe um elemento h1 com o id "trybewarts-header-title" e texto "Trybewarts', () => {
       cy.get(TRYBEWARTS_HEADER_TITLE).should('exist')
         .and('have.text', 'Trybewarts');
@@ -327,7 +327,7 @@ describe('Trybewarts', () => {
     });
   });
 
-  describe.only('19 - Crie um rodapé no final da página', () => {
+  describe('19 - Crie um rodapé no final da página', () => {
     it('O rodapé deve conter o texto "Direitos reservados à Trybewarts©"', () => {
       cy.get('footer')
         .should('exist')
